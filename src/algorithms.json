@@ -7,7 +7,7 @@
     "cons": ["Reeeal slow 🐢"],
     "averagePerformance": "O(n²)",
     "stable": true,
-    "addedOn": "31-DEC-1999"
+    "addedOn": "31 DEC 1999"
   },
   {
     "name": "Insertion sort",
@@ -21,7 +21,7 @@
     "cons": ["Bad on large data sets"],
     "averagePerformance": "O(n²)",
     "stable": true,
-    "addedOn": "01-JAN-2019"
+    "addedOn": "01 JAN 2019"
   },
   {
     "name": "Pancake Sort",
@@ -30,7 +30,7 @@
     "pros": ["Spatula-based"],
     "cons": ["You get hungry waiting for it to finish"],
     "averagePerformance": "O(🥞)",
-    "addedOn": "14-FEB-2020"
+    "addedOn": "14 FEB 2020"
   },
   {
     "name": "Timsort",
@@ -40,7 +40,7 @@
     "cons": ["You need a Tim-level engineer to write it for you"],
     "averagePerformance": "O(n log n)",
     "stable": true,
-    "addedOn": "01-FEB-2020"
+    "addedOn": "01 FEB 2020"
   },
   {
     "name": "Tree Sort",
@@ -51,6 +51,6 @@
       "Memory needed for the tree which may duplicate the original data"
     ],
     "averagePerformance": "O(n log n)",
-    "addedOn": "01-JAN-1970"
+    "addedOn": "01 JAN 1970"
   }
 ]
