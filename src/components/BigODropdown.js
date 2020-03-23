@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const ALL_LABEL = "Show All";
+const ALL_LABEL = "Show All Big O";
 export const SHOW_ALL_FILTER_FUNCTION = () => true;
 SHOW_ALL_FILTER_FUNCTION.bigO = ALL_LABEL;
 

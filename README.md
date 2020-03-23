@@ -15,14 +15,16 @@ In [algorithms.json](./src/algorithms.json) there is some example data but you c
 
 Once the page is showing the data, let's add ways to change the way the list is viewed.
 
-- Add a dropdown to choose Big O Notation (e.g. O(n²)). When the user chooses one, the list should hide all algorithms except those with that Big O value for `averagePerformance`
 - Add a checkbox "Stable" that is checked by default. When the user unchecks it, you should only hide algorithms where stable is `true`
-- Add two links, "Most Recent First" and "Oldest First". When clicked, the list should sort according to `addedOn`
+  - Note: some data won't have a "stable" attribute which means it's not known if it's stable. Treat that as `false` for the purposes of the filter
+- Add a dropdown to choose Big O Notation (e.g. O(n²)). When the user chooses one, the list should hide all algorithms except those with that Big O value for `averagePerformance`
+  - The default choice should be "Show All" so none are filtered.
 
 ## Optional Challenges
 
 Once you have the above working well, consider taking on one of these optional add-ons. Be sure to commit before starting them in case you need to stop if you run out of time.
 
+1. Add a radio button group: "No Sorting (same as in JSON file)", "Most Recent First" and "Oldest First". When clicked, the list should sort according to `addedOn`
 1. Style the page using your own custom styles or a prebuilt library like [reactstrap](https://reactstrap.github.io/components/alerts/) or [material-ui](https://material-ui.com/)
 1. Add a form at the bottom so users can add new algorithms without editing the JSON
 1. When a user changes the sort, actually use one of the slow sorts to manually sort the data, updating the display with each step (add a delay so it's not too fast). If you really get ambititious you could consider animating the swaps 😱with an [animation library](https://www.freshtilledsoil.com/whats-the-most-developer-friendly-react-animation-library/).

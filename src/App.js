@@ -4,10 +4,12 @@ import AlgorithmList from "./components/AlgorithmList";
 import BigODropdown, {
   SHOW_ALL_FILTER_FUNCTION
 } from "./components/BigODropdown";
+import Sorter, { NO_SORT_FUNCTION } from "./components/Sorter";
 
 const DEFAULT_STATE = {
   stableIsChecked: false,
-  bigOFilter: SHOW_ALL_FILTER_FUNCTION
+  bigOFilter: SHOW_ALL_FILTER_FUNCTION,
+  sortFunction: NO_SORT_FUNCTION
 };
 
 class App extends Component {
@@ -43,6 +45,7 @@ class App extends Component {
     }
     const hiddenCount =
       this.props.algorithms.length - algorithmsToDisplay.length;
+    algorithmsToDisplay.sort(this.state.sortFunction);
     return (
       <section>
         <h1>Data Structures & Algorithms ({algorithmsToDisplay.length})</h1>
@@ -50,6 +53,10 @@ class App extends Component {
           selected={this.state.bigOFilter.bigO}
           algorithms={this.props.algorithms}
           setFilter={func => this.setState({ bigOFilter: func })}
+        />
+        <Sorter
+          current={this.state.sortFunction}
+          updateSortFunction={func => this.setState({ sortFunction: func })}
         />
         {this.renderResetLink(hiddenCount)}
         <label>
