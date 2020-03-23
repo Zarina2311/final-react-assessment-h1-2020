@@ -8,7 +8,7 @@ class Algorithm extends Component {
     return (
       <div className="algorithm" key={this.props.name}>
         <h3>
-          <a href={this.props.wikipediaUrl}>{this.props.name}</a>
+          <a href={this.props.moreDetailsUrl}>{this.props.name}</a>
         </h3>
         <img alt="logo" src={this.props.imageUrl} width={300} />
         <p>Avg. Perf: {this.props.averagePerformance}</p>
@@ -17,6 +17,7 @@ class Algorithm extends Component {
         </ConditionallyVisible>
         <div>
           <StableMarker stable={this.props.stable} />
+          <p>{this.props.description}</p>
           <p>
             <small>Added {this.props.addedOn.format("MMMM Do YYYY")}</small>
           </p>
