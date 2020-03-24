@@ -9,6 +9,7 @@ In [algorithms.json](./src/algorithms.json) there is some example data but you c
 Create an `Algorithm` component that shows the data for each algorithm.
 
 - Name as a heading
+- Include the `moreDetailsUrl` as a link (your choice if the name itself is a link or there is a separate "View More")
 - The image (hint: use the numeric `width` to constrain the size but keep the aspect ratio, or you can also use CSS)
 - Description
 - `averagePerformance` (Big O Notation)
@@ -29,13 +30,16 @@ The SEAM will assign you one of these features:
 
 ### "Stable" Filter Checkbox
 
-- Add a checkbox "Stable" that is checked by default. When the user unchecks it, you should only hide algorithms where stable is `true`
-  - Note: some data won't have a "stable" attribute which means it's not known if it's stable. Treat that as `false` for the purposes of the filter
+Add a checkbox above the list labeled "Only Show Stable""
+- When checked, only stable algorithms should be visible
+- When not checked (default) all algorithms should be visible
+- Note: some data won't have a "stable" attribute which means it's not known if it's stable. Treat that as `"stable": false` for the purposes of the filter
 
 ### Big O Dropdown Filter
 
 - Add a dropdown to choose Big O Notation (e.g. O(n²)). When the user chooses one, the list should hide all algorithms except those with that Big O value for `averagePerformance`
-  - The default choice should be "Show All Big O Notations" so none are filtered.
+- The default choice should be "Show All Big O Notations" so none are filtered.
+- You can hardcode the options or for a challenge, extract the distinct options from the JSON data
 
 ### Sorting Radio Buttons
 
@@ -62,6 +66,7 @@ Add a count to the top of the page showing how many algorithms exist in the data
 ### Show/Hide Pros & Cons
 
 Add a toggle so you can conditionally show and hide pros & cons since they might take up a lot of space.
+- Your choice if each Algorithm has a toggle or there is one top-level control that show/hides all at the same time
 
 ### Multi-Filter
 
